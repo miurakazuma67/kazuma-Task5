@@ -8,13 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet private weak var textField1: UITextField!
     @IBOutlet private weak var textField2: UITextField!
     @IBOutlet private weak var resultLabel: UILabel!
     var alertController: UIAlertController!
-    
-    func alert(title:String, message:String) {
+
+    func alert(title: String, message: String) {
         alertController = UIAlertController(title: title,
                                             message: message,
                                             preferredStyle: .alert)
@@ -23,7 +22,6 @@ class ViewController: UIViewController {
                                                 handler: nil))
         present(alertController, animated: true)
     }
-    
     @IBAction func buttonTapped(_ sender: Any) {
         guard let num1 = Double(textField1.text!) else {
             alert(title: "課題5",
@@ -44,4 +42,3 @@ class ViewController: UIViewController {
         resultLabel.text = String(result)
     }
 }
-
